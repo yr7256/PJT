@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class='text-center'>DETAIL</h1>
+<hr>
+<div class="card mx-auto" style="width: 25rem;">
+  <img src="{{ movie.poster_url }}" alt=" ">
+    <h3>{{ movie.title }}</h3>
+    <p>audience : {{ movie.audience }}</p>
+    <p>Release Dates : {{ movie.release_date }}</p>
+    <p>Genre : {{ movie.genre }}</p>
+    <p>Score : {{ movie.score }}</p>
+    <P>{{ movie.description }}</p>
+    <div class="d-flex justify-content-start">
+    <a class="btn btn-info mx-2" href="{% url 'movies:update' movie.pk %}" role="button">UPDATE</a>
+    <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+      {% csrf_token %}
+      <button class="btn btn-danger" type="submit">DELETE</button>
+    </form>
+    </div>
+</div>
+<a class="btn btn-warning" href="{% url 'movies:index' %}" role="button">BACK</a>
+{% endblock content %}
+
