@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>NEW</h1>
+  <hr>
+  <form action="{% url 'movies:create' %}" method="POST">
+    {% csrf_token %}
+    <label for="title">TITLE</label>
+    <input type="text" name="title"><br>
+    <label for="audience">AUDIENCE</label>
+    <input type="text" name="audience"><br>
+    <label for="release_date">RELEASE_DATE</label>
+    <input type="date" name="release_date"><br>
+    <label for="genre">GENRE</label>
+    <select name="genre" id='genre'>
+      <option value="comedy">코미디</option>
+      <option value="sf">SF</option>
+      <option value="tv_movie">TV 영화</option>
+      <option value="family">가족</option>
+      <option value="horror">공포</option>
+      <option value="documentary">다큐멘터리</option>
+      <option value="drama">드라마</option>
+      <option value="romance">로맨스</option>
+      <option value="adventure">모험</option>
+      <option value="mystery">미스터리</option>
+      <option value="crime">범죄</option>
+      <option value="western">서부</option>
+      <option value="thriller">스릴러</option>
+      <option value="animation">애니메이션</option>
+      <option value="action">액션</option>
+      <option value="history">역사</option>
+      <option value="music">음악</option>
+      <option value="war">전쟁</option>
+      <option value="fantasy">판타지</option>
+    </select><br>
+    <label for="score">SCORE</label>
+    <input type="text" name="score"><br>
+    <label for="poster_url">POSTER_URL</label>
+    <input type="text" name="poster_url"><br>
+    <label for="description">DESCRIPTION</label>
+    <textarea name="description"></textarea><br>
+    <input type="submit" value="Submit">
+  </form>
+  <hr>
+  <a href="{% url 'movies:index' %}">BACK</a>
+{% endblock content %}

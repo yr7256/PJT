@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>EDIT</h1>
+  <form action="{% url 'movies:update' movie.pk %}" method="POST">
+    {% csrf_token %}
+    <label for="title">TITLE</label>
+    <input type="text" name="title" value="{{ movie.title }}"><br>
+    <label for="audience">AUDIENCE</label>
+    <input type="text" name="audience" value="{{ movie.audience }}"><br>
+    <label for="release_date">RELEASE_DATE</label>
+    <input type="date" name="release_date" value="{{ date }}"><br>
+    <label for="genre">GENRE</label>
+    <select name="genre" id='genre'>
+      <option value="">{{ movie.genre }}</option>
+      <option value="코미디">코미디</option>
+      <option value="SF">SF</option>
+      <option value="TV 영화">TV 영화</option>
+      <option value="가족">가족</option>
+      <option value="공포">공포</option>
+      <option value="다큐멘터리">다큐멘터리</option>
+      <option value="드라마">드라마</option>
+      <option value="로맨스">로맨스</option>
+      <option value="모험">모험</option>
+      <option value="미스터리">미스터리</option>
+      <option value="범죄">범죄</option>
+      <option value="서부">서부</option>
+      <option value="스릴러">스릴러</option>
+      <option value="애니메이션">애니메이션</option>
+      <option value="액션">액션</option>
+      <option value="역사">역사</option>
+      <option value="음악">음악</option>
+      <option value="전쟁">전쟁</option>
+      <option value="판타지">판타지</option>
+    </select><br>
+    <label for="score">SCORE</label>
+    <input type="text" name="score" value="{{ movie.score }}"><br>
+    <label for="poster_url">POSTER_URL</label>
+    <input type="text" name="poster_url" value="{{ movie.poster_url }}"><br>
+    <label for="description">DESCRIPTION</label>
+    <textarea name="description">{{ movie.description }}</textarea><br>
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+  </form>
+  <hr>
+  <a href="{% url 'movies:index' %}">BACK</a>
+  </form>
+{% endblock content %}
