@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="01_nav_footer.css">
+  <link rel="stylesheet" href="02_home.css">
+  <title>Community</title>
+</head>
+
+<body>
+  <!-- 01_nav_footer에서 완성한 Navigation bar & Modal & Footer 코드를 적절한 위치에 사용합니다. -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./02_home.html"><img src="./images/logo.png" width="120" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./02_home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./03_community.html">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 02_home.html -->
+  <header>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/header1.jpg" class="d-block w-100" alt="header1">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/header2.jpg" class="d-block w-100" alt="header2">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/header3.jpg" class="d-block w-100" alt="header3">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <h1 class="text-center my-5">Boxoffice</h1>
+  <section class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-sm-4">
+        <div class="card w-100">
+          <img src="./images/movie1.jpg" class="card-img-top" alt="쇼생크 탈출">
+          <div class="card-body">
+            <p class="h3">쇼생크 탈출</p>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus labore nemo dolorem
+              ipsum. Recusandae culpa numquam maiores neque fugit nulla sunt deleniti repudiandae sint quam dolor,
+              nesciunt libero incidunt unde!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card w-100">
+          <img src="./images/movie2.jpg" class="card-img-top" alt="죽은 시인의 사회">
+          <div class="card-body">
+            <p class="h3">죽은 시인의 사회</p>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia itaque delectus
+              quae repellat illo cum officiis quia doloremque expedita, iure amet ratione tempora autem eos unde.
+              Praesentium hic aut laboriosam.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card w-100">
+          <img src="./images/movie3.jpg" class="card-img-top" alt="다크나이트 라이즈">
+          <div class="card-body">
+            <p class="h3">다크나이트 라이즈</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut recusandae enim saepe
+              adipisci natus? Obcaecati, quibusdam quam laborum quaerat cum, quasi incidunt dignissimos, quisquam
+              atque soluta rerum quidem vel vitae?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card w-100">
+          <img src="./images/movie4.jpg" class="card-img-top" alt="그랜드 부다페스트 호텔">
+          <div class="card-body">
+            <p class="h3">그랜드 부다페스트 호텔</p>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, dolorem animi nisi
+              sit quod placeat! Vel sint aperiam dolorem ratione ipsam reiciendis. Minus dolorum iste nam, deserunt
+              distinctio perspiciatis odio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card w-100">
+          <img src="./images/movie5.jpg" class="card-img-top" alt="her">
+          <div class="card-body">
+            <p class="h3">her</p>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, laboriosam odit quo
+              rem ut vero qui veniam! Esse culpa quo, aliquid, rerum veniam iure impedit autem reprehenderit repellat
+              numquam unde.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card w-100">
+          <img src="./images/movie6.jpg" class="card-img-top" alt="위대한 쇼맨">
+          <div class="card-body">
+            <p class="h3">위대한 쇼맨</p>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis autem, nam
+              ullam necessitatibus voluptas esse molestiae repellat architecto saepe laboriosam nesciunt explicabo
+              alias debitis harum illo! Beatae incidunt quia labore.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="container d-flex justify-content-center align-items-center fixed-bottom text-muted mb-2">
+    <div class="footer-content">
+      <span>Web bootstrap PJT, by 김영록</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
